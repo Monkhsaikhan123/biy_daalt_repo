@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background-color:gray;
+        }
+        .header{
+            width:100%;
+            height:20vh;
+            background-color:aqua;
+        }
+        .startsimulation{
+            width:100%;
+            height:60%;
+            background-color:bisque;
+            display:flex;
+        }
+        .blank{
+            width:25%;
+            width: 100%;
+            background-color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center
+        }
+        .blank1{
+            position: relative;
+        }
+        .button1{
+            position:absolute;
+            width: 100%;
+            height:50%;
+            z-index:1
+        }
+        .button2{
+            position:absolute;
+            width: 100%;
+            height:50%;
+        }
+        .days{
+            width:100%;
+            height:40%;
+            background-color:violet;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .finals{
+            width:100%;
+            height:5vh;
+            background-color:black;
+            display:flex;
+        }
+        .odor{
+            width:25%;
+            height:100%;
+            background-color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width:100%;
+            height:75vh;
+            background-color:white;
+            display:flex;
+        }
+        .day1{
+            width:25%;
+            height: 100%;
+            background-color:gold;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .tournament{
+            width: 90%;
+            height:20%;
+            background-color:white;
+            
+        }
+        .day2{
+            width:25%;
+            height: 100%;
+            background-color:aqua;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .tournamentday2{
+            width: 90%;
+            height:20%;
+            background-color:white;
+        }
+        .day3{
+            width:25%;
+            height: 100%;
+            background-color:orange;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .tournamentday3{
+            width: 90%;
+            height:20%;
+            background-color:white;
+        }
+        .day4{
+            width:25%;
+            height: 100%;
+            background-color:greenyellow;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .tournamentday4{
+            width: 90%;
+            height:20%;
+            background-color:white;
+        }
+
+
+        .toglohodor{
+            width: 100%;
+            height: 30%;
+            background-color:orange;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fight{
+            width: 100%;
+            height:70%;
+            background-color:orangered;
+            display:flex;
+        }
+        .team{
+            width:35%;
+            height:100%;
+            background-color:rebeccapurple;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vs{
+            width:30%;
+            height:70%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="startsimulation">
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div class="blank blank1">
+                    <button class="button1" id="button1" onclick="Start()">Start Simulation</button>
+                    <button class="button2" id="button2" onclick="Pause()">Pause</button>
+                </div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                
+               
+            </div>
+            <div class="days">
+                <p1 id="p1">1</p1>
+                <p2 id="p2">5</p2>
+                <p3>/</p3>
+                <p4 id="p4">0</p4>
+                <p5 id="p5">5</p5>
+                <p6>/</p6>
+                <p7 id="p7">2</p7>
+                <p8 id="p8">0</p8>
+                <p9 id="p9">2</p9>
+                <p10 id="p10">2</p10>
+            </div>
+        </div>
+        <div class="finals">
+            <div class="odor quarterfinal">
+                <h4>Quarter Final</h4>
+            </div>
+            <div class="odor semifinal">
+                <h4>Semi Final</h4>
+            </div>
+            <div class="odor bronzemedal">
+                <h4>Bronze Medal Game</h4>
+            </div>
+            <div class="odor goldenmedal">
+                <h4>Golden Medal Game</h4>
+            </div>
+        </div>
+        <div class="main">
+            <div class="day day1">
+                <div class="tournament tournament1">
+                    <div class="toglohodor">
+                        <h5>05/17/2022</h5>
+
+                    </div>
+                    <div class="fight" id="fight1">
+                        <div class="team team1" id="team1">Team1</div>
+                        <div class="vs">VS</div>
+                        <div class="team team2" id="team2">Team2</div>
+                    </div>
+                </div>
+                <div class="tournament tournament2">
+                    <div class="toglohodor">
+                        <h5>05/18/2022</h5>
+                    </div>
+                    <div class="fight" id="fight2">
+                        <div class="team team3" id="team3">Team3</div>
+                        <div class="vs">VS</div>
+                        <div class="team team4" id="team4">Team4</div>
+                    </div>
+                </div>
+                <div class="tournament tournament3">
+                    <div class="toglohodor">
+                        <h5>05/17/2022</h5>
+                    </div>
+                    <div class="fight" id="fight3">
+                        <div class="team team5" id="team5">Team5</div>
+                        <div class="vs">VS</div>
+                        <div class="team team6" id="team6">Team6</div>
+                    </div>
+                </div>
+                <div class="tournament tournament4">
+                    <div class="toglohodor">
+                        <h5>05/18/2022</h5>
+                    </div>
+                    <div class="fight" id="fight4">
+                        <div class="team team7" id="team7">Team7</div>
+                        <div class="vs">VS</div>
+                        <div class="team team8" id="team8">Team8</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day2">
+                <div class="tournamentday2">
+                    <div class="toglohodor">
+                        <h5>05/21/2022</h5>
+                    </div>
+                    <div class="fight" id="fight5">
+                        <div class="team team9" id="winnerOf1and2">Winner of (team1 or team 2)</div>
+                        <div class="vs">VS</div>
+                        <div class="team team10" id="winnerOf3and4">Winner of (team3 or team4)</div>
+                    </div>
+                </div>
+                <div class="tournamentday2">
+                    <div class="toglohodor">
+                        <h5>05/22/2022</h5>
+                    </div>
+                    <div class="fight" id="fight5">
+                        <div class="team team11" id="winnerOf5and6">Winner of (team5 or team 6)</div>
+                        <div class="vs">VS</div>
+                        <div class="team team12" id="winnerOf7and8">Winner of (team7 or team8)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day3">
+                <div class="tournamentday3">
+                    <div class="toglohodor">
+                        <h5>05/23/2022</h5>
+                    </div>
+                    <div class="fight" id="fight6">
+                        <div class="team team7" id="loserof1or2and3or4">Loser of (team1or2 and team3or4)</div>
+                        <div class="vs">VS</div>
+                        <div class="team team8" id="loserof5or6and7or8">Loser of (team5or6 or team7or8)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day4">
+                <div class="tournamentday4">
+                    <div class="toglohodor">
+                        <h5>05/25/2022</h5>
+                    </div>
+                    <div class="fight" id="fight7">
+                        <div class="team team7" id="winnerOf1or2and3or4">Winner of (team1or2 and team3or4)</div>
+                        <div class="vs">VS</div>
+                        <div class="team team8" id="winnerOf5or6and7or8">Winner of (team5or6 or team7or8)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        tinterval = 0
+        
+        ehleh =function(){
+            p2.innerHTML++
+            console.log(p1.innerHTML,p2.innerHTML)
+            if(p2.innerHTML > 9){
+                p1.innerHTML++
+                p2.innerHTML = 0
+            }
+            else if(p1.innerHTML == 3 && p2.innerHTML > 1){
+                p5.innerHTML++
+                p1.innerHTML = 0
+                p2.innerHTML = 1
+                alert("Дараанын Сар Эхлэх")
+            }
+            else if(p5.innerHTML === 9){
+                p4.innerHTML++
+                p5.innerHTML = 0
+            }
+
+
+
+
+            else if(p1.innerHTML == 1 && p2.innerHTML == 7 && p5.innerHTML == 5){
+                var words = ['Team1', 'Team2'];
+                const negbolonhoyr = Math.floor(Math.random() * words.length)
+                console.log(negbolonhoyr)
+                winnerOf1and2.innerHTML = words[negbolonhoyr]
+
+
+
+                var words = ['Team5', 'Team6']
+                const tavbolonzurgaa = Math.floor(Math.random()*words.length)
+                console.log(tavbolonzurgaa)
+                winnerOf5and6.innerHTML = words[tavbolonzurgaa]
+            }
+            else if(p1.innerHTML == 1 && p2.innerHTML == 8 && p5.innerHTML == 5){
+                var words = ['Team3', 'Team4'];
+                const guravbolondorov = Math.floor(Math.random() * words.length)
+                console.log(guravbolondorov)
+                winnerOf3and4.innerHTML = words[guravbolondorov]
+
+
+
+                var words = ['Team7', 'Team8'];
+                const doloobolonnaim = Math.floor(Math.random() * words.length)
+                console.log(doloobolonnaim)
+                winnerOf7and8.innerHTML = words[doloobolonnaim]
+            }
+
+
+
+
+            else if(p1.innerHTML == 2 && p2.innerHTML == 1 && p5.innerHTML == 5){
+                console.log(negbolonhoyr,guravbolondorov)
+                loserof1or2and3or4.innerHTML = Math.floor(Math.random()*words.length)
+            }
+
+
+
+
+
+
+           
+
+        }
+
+        Start = function(){
+            tinterval = setInterval(ehleh, 1000);
+            button1.style.visibility = "hidden"
+
+        }
+
+
+        Pause = function(){
+            clearInterval(tinterval)
+            button1.style.visibility = "visible"
+        }
+    </script>
+</body>
+</html>
+
+<!-- player.innerHTML = "Player : Paper";
+var words = ['Rock', 'Paper', 'Scissors'];
+const randomInt = Math.floor(Math.random() * words.length)
+
+console.log(randomInt)
+cpu.innerHTML = 'Cpu:'+ words[randomInt]; 
+console.log(cpu.innerHTML,player.innerHTML)
+if(randomInt == 1){
+    tentseh.innerHTML++
+    console.log('tentschlee')
+
+}
+if(randomInt == 0){
+    ylagdah.innerHTML++
+}
+if(randomInt == 2){
+    ylah.innerHTML++
+} -->
+
+
+
+
+
+if(negbolonhoyr === 0 && guravbolondorov == 0 ){
+    var words = ['Team1', 'Team3'];
+    const negbolongurav = Math.floor(Math.random() * words.length)
+    console.log(negbolongurav)
+    winnerOf1or2and3or4 = words[negbolongurav]
+}
+if(negbolonhoyr === 1 && guravbolondorov == 0 ){
+    var words = ['Team2', 'Team3'];
+    const hoyrbolongurav = Math.floor(Math.random() * words.length)
+    console.log(hoyrbolongurav)
+    winnerOf1or2and3or4 = words[hoyrbolongurav]
+}
+if(negbolonhoyr === 0 && guravbolondorov == 1 ){
+    var words = ['Team1', 'Team4'];
+    const negbolondorov = Math.floor(Math.random() * words.length)
+    console.log(negbolondorov)
+    winnerOf1or2and3or4 = words[negbolondorov]
+}
+if(negbolonhoyr === 1 && guravbolondorov == 1 ){
+    var words = ['Team2', 'Team4'];
+    const hoyrbolondorov = Math.floor(Math.random() * words.length)
+    console.log(hoyrbolondorov)
+    winnerOf1or2and3or4 = words[hoyrbolondorov]
+}
