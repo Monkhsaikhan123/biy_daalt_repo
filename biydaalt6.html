@@ -311,10 +311,7 @@
         day8.innerHTML = "TBD"
         tinerval = 0
         x = 0
-
         start = function(){
-
-           
             if(x == 0){
                 tinterval = setInterval(run, 1000);
                 button1.innerHTML = "Pause"
@@ -359,7 +356,6 @@
                     console.log(day8.innerHTML)
                     hello8 = day8.innerHTML
                 }
-                
                 else{
                     day1.innerHTML
                     day2.innerHTML
@@ -369,18 +365,13 @@
                     day6.innerHTML
                     day7.innerHTML
                     day8.innerHTML
-                }
-
-
- 
-               
+                }    
             }
             else if( x == 1){
                 clearInterval(tinterval)
                 button1.innerHTML = "Start Simulation"
                 x = 0
-            }
-           
+            }   
         }
         team1.innerHTML = "Team1"
         team2.innerHTML = "Team2"
@@ -487,7 +478,6 @@
                     alert("Golden Medal:" + golden2.innerHTML + "\n" + "Silver Medal:" + golden1.innerHTML + "\n" + "Bronze Medal:" + bronzewinner)
                 }
             }
-
         }
     </script>
 </body>
