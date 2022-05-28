@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="moment.js"></script>
+    <title>Document</title>
+    <style>
+        .container{
+            height:100vh;
+            background-color:gray;
+        }
+        .header{
+            height:5vh;
+            display:flex;
+        }
+        .empty{
+            width:40%;
+            height: 100%;
+            background-color:brown;
+        }
+        .buttonheseg{
+            width:20%;
+            height:100%;
+            position: relative;
+        }
+        button{
+            width:100%;
+            height:100%;
+            position:absolute;
+        }
+        .ognoo{
+            height:5vh;
+            background-color:teal;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:30px;
+        }
+        .finals{
+            height:5vh;
+            display:flex;
+
+        }
+        .final{
+            width: 25%;
+            height:100%;
+            background-color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            height:85vh;
+            background-color:gold;
+            display:flex;
+        }
+        .day{
+            width:25%;
+            height:100%;
+            background-color:bisque;
+            border:1px solid black;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .white{
+            width: 90%;
+            height:20%;
+            background-color:white;
+            display:flex;
+            flex-direction: column;
+        }
+        .toglohodor{
+            width: 100%;
+            height:20%;
+            background-color:brown;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fight{
+            width:100%;
+            height:80%;
+            display:flex;
+            background-color:aliceblue;
+        }
+        .team{
+            width:25%;
+            height: 100%;
+            background-color:aqua;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .versus{
+            width:10%;
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .onoo{
+            width:20%;
+            height: 100%;
+            background-color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .huree{
+            width:40%;
+            height: 20%;
+            border:1px solid black;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="empty"></div>
+            <div class="buttonheseg">
+                <button id="button1" onclick="start()">Start simulation</button>
+            </div>
+            <div class="empty"></div>
+        </div>
+        <div class="ognoo" id="ognoo">
+            <p1 id="odor">22</p1>
+            <p1>/</p1>
+            <p1 id="sar">5</p1>
+            <p1>/</p1>
+            <p1 id="jil">2022</p1>
+        </div>
+        <div class="finals">
+            <div class="final final1" id="quarterfinal"></div>
+            <div class="final final2" id="semifinal"></div>
+            <div class="final final3" id="bronzemedalgame"></div>
+            <div class="final final4" id="goldenmedalgame"></div>
+        </div>
+        <div class="main">
+            <div class="day day1">
+                <div class="white white1">
+                    <div class="toglohodor odor1" id="day1"></div>
+                    <div class="fight fight1">
+                        <div class="team team1" id="team1">Team1</div>
+                        <div class="onoo onoo1" id="onoo1">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo2" id="onoo2">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team2" id="team2">Team2</div>
+                    </div>
+                </div>
+                <div class="white white2">
+                    <div class="toglohodor odor2" id="day2"></div>
+                    <div class="fight fight2">
+                        <div class="team team3" id="team3">Team3</div>
+                        <div class="onoo onoo3" id="onoo3">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo4" id="onoo4">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team4" id='team4'>Team4</div>
+                    </div>
+                </div>
+                <div class="white white3">
+                    <div class="toglohodor odor3" id=day3></div>
+                    <div class="fight fight3">
+                        <div class="team team5" id="team5">Team5</div>
+                        <div class="onoo onoo5" id="onoo5">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo6" id="onoo6">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team6" id="team6">Team6</div>
+                    </div>
+                </div>
+                <div class="white white4">
+                    <div class="toglohodor odor4" id="day4"></div>
+                    <div class="fight fight4">
+                        <div class="team team7" id="team7">Team7</div>
+                        <div class="onoo onoo7" id="onoo7">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo8" id="onoo8">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team8" id="team8">Team8</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day2">
+                <div class="white white5">
+                    <div class="toglohodor odor5" id="day5"></div>
+                    <div class="fight fight5">
+                        <div class="team team1or2" id="winner1">Winner1or2</div>
+                        <div class="onoo onoo9" id="onoo9">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo10" id="onoo10">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team3or4" id="winner2">Winner3or4</div>
+                    </div>
+                </div>
+                <div class="white white6">
+                    <div class="toglohodor odor6" id="day6"></div>
+                    <div class="fight fight6">
+                        <div class="team team5or6" id="winner3">Winner5or6</div>
+                        <div class="onoo onoo11" id="onoo11">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo12" id="onoo12">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team team7or8" id="winner4">Winner7or8</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day3">
+                <div class="white white7">
+                    <div class="toglohodor odor7" id="day7"></div>
+                    <div class="fight fight7">
+                        <div class="team teambronze" id="loser1">LoserSemi</div>
+                        <div class="onoo onoo11" id="onoo13">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo12" id="onoo14">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team teambronze" id="loser2">LoserSemi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day day4">
+                <div class="white white8">
+                    <div class="toglohodor odor8" id="day8"></div>
+                    <div class="fight fight8">
+                        <div class="team teamgolden" id="golden1">WinnerSemi</div>
+                        <div class="onoo onoo15" id="onoo15">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="versus">VS</div>
+                        <div class="onoo onoo16" id="onoo16">
+                            <div class="huree">
+                                <p3>00</p3>
+                            </div>
+                        </div>
+                        <div class="team teamgolden" id="golden2">WinnerSemi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        quarterfinal.innerHTML = "Quarter Final"
+        semifinal.innerHTML = "Semi Final"
+        bronzemedalgame.innerHTML = "Bronze Medal Game"
+        goldenmedalgame.innerHTML = "Golden Medal Game"
+        day1.innerHTML = "TBD"
+        day2.innerHTML = "TBD"
+        day3.innerHTML = "TBD"
+        day4.innerHTML = "TBD"
+        day5.innerHTML = "TBD"
+        day6.innerHTML = "TBD"
+        day7.innerHTML = "TBD"
+        day8.innerHTML = "TBD"
+        tinterval = 0
+        x = 0
+        start = function(){
+            quarterfinal.style.fontWeight = "800"
+            if(x == 0){
+                tinterval = setInterval(run, 1000);
+                button1.innerHTML = "Pause"
+                x = 1
+                if(day1.innerHTML == "TBD"){
+                    day1.innerHTML = Math.floor(Math.random() * (30 - 25 + 1)) + 25 + "/" + sar.innerHTML + "/" + jil.innerHTML;
+                    hello1 = day1.innerHTML
+                    console.log(x)
+                }
+                if(day2.innerHTML == "TBD"){
+                    day2.innerHTML = Math.floor(Math.random() * (30 - 25 + 1)) + 25 + "/" + sar.innerHTML + "/" + jil.innerHTML;
+                    console.log(day2.innerHTML)
+                    hello2 = day2.innerHTML
+                }
+                if(day3.innerHTML == "TBD"){
+                    day3.innerHTML = Math.floor(Math.random() * (30 - 25 + 1)) + 25 + "/" + sar.innerHTML + "/" + jil.innerHTML;
+                    console.log(day3.innerHTML)
+                    hello3 = day3.innerHTML
+                }
+                if(day4.innerHTML == "TBD"){
+                    day4.innerHTML = Math.floor(Math.random() * (30 - 25 + 1)) + 25 + "/" + sar.innerHTML + "/" + jil.innerHTML;
+                    console.log(day4.innerHTML)
+                    hello4 = day4.innerHTML
+                }
+
+                if(day5.innerHTML == "TBD"){
+                    day5.innerHTML = Math.floor(Math.random() * (3 - 1 + 1)) + 1 + "/" + "06" + "/" + jil.innerHTML;
+                    console.log(day5.innerHTML)
+                    hello5 = day5.innerHTML
+                }
+                if(day6.innerHTML == "TBD"){
+                    day6.innerHTML = Math.floor(Math.random() * (3 - 1 + 1)) + 1 + "/" + "06" + "/" + jil.innerHTML;
+                    console.log(day6.innerHTML)
+                    hello6 = day6.innerHTML
+                }
+                if(day7.innerHTML == "TBD"){
+                    day7.innerHTML = Math.floor(Math.random() * (8 - 4 + 1)) + 4 + "/" + "06" + "/" + jil.innerHTML;
+                    console.log(day7.innerHTML)
+                    hello7 = day7.innerHTML
+                }
+                if(day8.innerHTML == "TBD"){
+                    day8.innerHTML = Math.floor(Math.random() * (12 - 9 + 1)) + 9 + "/" + "06" + "/" + jil.innerHTML;
+                    console.log(day8.innerHTML)
+                    hello8 = day8.innerHTML
+                }
+                else{
+                    day1.innerHTML
+                    day2.innerHTML
+                    day3.innerHTML
+                    day4.innerHTML
+                    day5.innerHTML
+                    day6.innerHTML
+                    day7.innerHTML
+                    day8.innerHTML
+                }  
+            }
+            else if( x == 1){
+                clearInterval(tinterval)
+                button1.innerHTML = "Start Simulation"
+                x = 0
+            }
+        }
+        run = function(){
+            odor.innerHTML++
+            if(odor.innerHTML == 31){
+                sar.innerHTML++
+                odor.innerHTML = 1
+            }
+            if(hello1 == odor.innerHTML+"/"+sar.innerHTML+"/"+jil.innerHTML){
+                    onoo1.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    onoo2.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    if(onoo1.innerHTML > onoo2.innerHTML){
+                        winner1.innerHTML = team1.innerHTML
+                        console.log(team1.innerHTML)
+                    }
+                    else if(onoo2.innerHTML > onoo1.innerHTML){
+                        winner1.innerHTML = team2.innerHTML
+                        console.log(team2.innerHTML)
+                    }
+                }
+            if(hello2 == odor.innerHTML+"/"+sar.innerHTML+"/"+jil.innerHTML){
+                    onoo3.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    onoo4.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    if(onoo3.innerHTML > onoo4.innerHTML){
+                        winner2.innerHTML = team3.innerHTML
+                        console.log(team3.innerHTML)
+                    }
+                    else if(onoo4.innerHTML > onoo3.innerHTML){
+                        winner2.innerHTML = team4.innerHTML
+                        console.log(team4.innerHTML)
+                    }
+                }
+            if(hello3 == odor.innerHTML+"/"+sar.innerHTML+"/"+jil.innerHTML){
+                    onoo5.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    onoo6.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    if(onoo5.innerHTML > onoo6.innerHTML){
+                        winner3.innerHTML = team5.innerHTML
+                        console.log(team5.innerHTML)
+                    }
+                    else if(onoo6.innerHTML > onoo5.innerHTML){
+                        winner3.innerHTML = team6.innerHTML
+                        console.log(team6.innerHTML)
+                    }
+                }
+            if(hello4 == odor.innerHTML+"/"+sar.innerHTML+"/"+jil.innerHTML){
+                    onoo7.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    onoo8.innerHTML = Math.floor(Math.random() * 100 + 1)
+                    if(onoo7.innerHTML > onoo8.innerHTML){
+                        winner4.innerHTML = team7.innerHTML
+                        console.log(team7.innerHTML)
+                        quarterfinal.style.fontWeight = "100"
+                        semifinal.style.fontWeight = "800"
+                    }
+                    else if(onoo8.innerHTML > onoo7.innerHTML){
+                        winner4.innerHTML = team8.innerHTML
+                        console.log(team8.innerHTML)
+                        quarterfinal.style.fontWeight = "100"
+                        semifinal.style.fontWeight = "800"
+                    }
+                }
+            if(1/6/2022 == odor.innerHTML+"/"+sar.innerHTML+"/"+jil.innerHTML){
+                alert("6sariin1")
+            }    
+            if(hello5 == odor.innerHTML+"/"+"06"+"/"+jil.innerHTML ){
+                onoo9.innerHTML = Math.floor(Math.random() * 100 + 1)
+                onoo10.innerHTML = Math.floor(Math.random() * 100 + 1)
+                if(onoo9.innerHTML > onoo10.innerHTML){
+                    loser1.innerHTML = winner2.innerHTML
+                    golden1.innerHTML = winner1.innerHTML
+                    console.log(golden1.innerHTML,loser1.innerHTML)
+                    
+                }
+                else if(onoo10.innerHTML > onoo9.innerHTML){
+                    loser1.innerHTML = winner1.innerHTML
+                    golden1.innerHTML = winner2.innerHTML
+                    console.log(golden1.innerHTML,loser1.innerHTML)
+                    
+                }
+            }
+            if(hello6 == odor.innerHTML+"/"+"06"+"/"+jil.innerHTML ){
+                onoo11.innerHTML = Math.floor(Math.random() * 100 + 1)
+                onoo12.innerHTML = Math.floor(Math.random() * 100 + 1)
+                if(onoo11.innerHTML > onoo12.innerHTML){
+                    loser2.innerHTML = winner4.innerHTML
+                    golden2.innerHTML = winner3.innerHTML
+                    console.log(golden2.innerHTML,loser2.innerHTML)
+                    semifinal.style.fontWeight = "100"
+                    bronzemedalgame.style.fontWeight = "800"
+                }
+                else if(onoo12.innerHTML > onoo11.innerHTML){
+                    loser2.innerHTML = winner3.innerHTML
+                    golden2.innerHTML = winner4.innerHTML
+                    console.log(golden2.innerHTML,loser2.innerHTML)
+                    semifinal.style.fontWeight = "100"
+                    bronzemedalgame.style.fontWeight = "800"
+                }
+            }
+            if(hello7 == odor.innerHTML+"/"+"06"+"/"+jil.innerHTML){
+                onoo13.innerHTML = Math.floor(Math.random() * 100 + 1)
+                onoo14.innerHTML = Math.floor(Math.random() * 100 + 1)
+                if(onoo13.innerHTML > onoo14.innerHTML){
+                    bronzewinner = loser1.innerHTML
+                    bronzemedalgame.style.fontWeight = "100"
+                    goldenmedalgame.style.fontWeight = "800"
+                }
+                else if(onoo14.innerHTML > onoo13.innerHTML){
+                    bronzewinner = loser2.innerHTML
+                    bronzemedalgame.style.fontWeight = "100"
+                    goldenmedalgame.style.fontWeight = "800"
+                }
+            }
+            if(hello8 == odor.innerHTML+"/"+"06"+"/"+jil.innerHTML){
+                onoo15.innerHTML = Math.floor(Math.random() * 100 + 1)
+                onoo16.innerHTML = Math.floor(Math.random() * 100 + 1)
+                if(onoo15.innerHTML > onoo16.innerHTML){
+                    alert("Golden Medal:" + golden1.innerHTML + "\n" + "Silver Medal:" + golden2.innerHTML + "\n" + "Bronze Medal:" + bronzewinner)
+                    goldenmedalgame.style.fontWeight = "100"
+                }
+                else if(onoo16.innerHTML > onoo15.innerHTML){
+                    alert("Golden Medal:" + golden2.innerHTML + "\n" + "Silver Medal:" + golden1.innerHTML + "\n" + "Bronze Medal:" + bronzewinner)
+                    goldenmedalgame.style.fontWeight = "100"
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
